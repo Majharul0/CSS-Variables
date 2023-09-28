@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <h5>Update CSS Variables with <span class='dhong'>JS</span></h5>
+
+  <div class="controls">
+    <div class="control">
+      <label for="spacing">Spacing:</label>
+      <input type="range" name="spacing" min="0" max="50" value="0" class="PB-range-slider" data-sizing="px" id="myRange">
+    </div>
+    <div class="control">
+      <label for="blur">Blur:</label>
+      <input type="range" name="blur" min="0" max="100" value="0" class="PB-range-slider" data-sizing="px" id="myRange">
+    </div>
+    <div class="control">
+
+      <label for="base">Base Color</label>
+      <input id="myRange" type="color" name="color" class="color" value="#008eec">
+    </div>
+  </div>
+
+  <div class="image">
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  </div>
+
+
+  <script>
+
+    const inputs = document.querySelectorAll("#myRange")
+
+    function handeChange(){
+      console.log(this.value );
+
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+    }
+
+    inputs.forEach(input => input.addEventListener("change", handeChange))
+  </script>
+
+</body>
+</html>

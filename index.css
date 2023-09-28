@@ -1,0 +1,110 @@
+:root{
+    --color:#008eec;
+    --spacing:0;
+    --blur:0
+}
+body {
+  text-align: center;
+  background: #000013;
+  color: rgb(243, 247, 255);
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+.dhong{
+    color: var(--color);
+}
+.controls {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.control label{
+    font-size: 22px;
+    font-weight: 500;
+}
+.image{
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color);
+    margin: 0 auto;
+    max-width: 500px;
+    padding: var(--spacing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    border-radius: 10px;
+    filter: blur(var(--blur));
+    width: 100%;
+}
+/* style for range */
+.PB-range-slider {
+-webkit-appearance: none;
+width: 100%;
+height: 4px;
+border-radius: 5px;
+background: var(--color);
+outline: none;
+opacity: 1;
+-webkit-transition: .2s;
+transition: opacity .2s;
+}
+
+.PB-range-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: rgb(243, 247, 255);
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-webkit-slider-thumb:hover {
+box-shadow: 0px 0px 0px 8px rgb(243, 247, 255,0.5);
+transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-moz-range-thumb {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #ffffff;
+cursor: pointer;
+}
+.PB-range-slidervalue {
+font-weight: 600;
+}
+
+/*------ color style ------*/
+.color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .color::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
+  .color::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
+  
